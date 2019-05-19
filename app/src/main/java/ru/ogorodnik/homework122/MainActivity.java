@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         final Button backBtn = (Button) findViewById(R.id.buttonBack);
 
         int num = 1+(int)((100-1+1)*Math.random());
-        linkText.setText("http://myfile.org/" + num);
+        String link = String.format(getString(R.string.link));
+        linkText.setText(link + num);
 
 // Нажатие кнопки ВПЕРЕД ---------------------------------------------------------------------
         frontBtn.setOnClickListener(new View.OnClickListener() {
