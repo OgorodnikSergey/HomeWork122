@@ -21,13 +21,14 @@ public class MainActivity extends AppCompatActivity {
         final Button backBtn = (Button) findViewById(R.id.buttonBack);
 
         int num = 1+(int)((100-1+1)*Math.random());
-        String link = String.format(getString(R.string.link));
-        linkText.setText(link + num);
+        //String link = String.format(getString(R.string.link));
+        linkText.setText(getString(R.string.link)+ num);
+        //linkText.setText(link + num);
 
 // Нажатие кнопки ВПЕРЕД ---------------------------------------------------------------------
         frontBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(intent);
             }
