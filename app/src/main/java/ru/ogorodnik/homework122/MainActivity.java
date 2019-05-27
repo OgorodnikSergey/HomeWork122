@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         int num = 1+(int)((100-1+1)*Math.random());
         //String link = String.format(getString(R.string.link));
-        linkText.setText(getString(R.string.link)+ num);
         //linkText.setText(link + num);
+        linkText.setText(getString(R.string.link, num));
 
 // Нажатие кнопки ВПЕРЕД ---------------------------------------------------------------------
         frontBtn.setOnClickListener(new View.OnClickListener() {
